@@ -1,0 +1,22 @@
+{% extends 'store/main.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center">Đăng nhập</h2>
+            <form method="post" class="mb-3">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </form>
+
+            <!-- Phần thông báo -->
+            <div class="alert alert-info" role="alert">
+                <strong>Chưa có tài khoản?</strong> Hãy <a href="{% url 'register' %}" class="alert-link">đăng ký
+                    ngay</a> để trải nghiệm dịch vụ của chúng tôi!
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

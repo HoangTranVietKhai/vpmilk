@@ -1,0 +1,152 @@
+/* Định dạng nền trang */
+body {
+    background-color: #A7DFFF !important;
+}
+
+/* Tiêu đề */
+h1, h2, h3, h4, h5, h6 {
+    color: hsl(0, 0%, 30%);
+}
+
+/* Hộp chứa nội dung */
+.box-element {
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Ảnh sản phẩm */
+.thumbnail {
+    width: 100%;
+    height: 200px;
+    box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
+}
+
+/* Sản phẩm */
+.product {
+    border-radius: 0 0 4px 4px;
+}
+
+/* Nền màu cho header */
+.bg-dark {
+    background-color: #007bff !important;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+}
+
+/* Logo hoặc tên thương hiệu */
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Căn chỉnh các phần tử trong navbar */
+.navbar .form-inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Nút đăng nhập */
+.navbar .login-btn {
+    background-color: yellow;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Chứa giỏ hàng */
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon giỏ hàng */
+#cart-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Badge hiển thị số lượng sản phẩm */
+#cart-total {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Căn chỉnh lưới sản phẩm */
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12 {
+    margin-top: 10px;
+}
+
+/* Nút bấm */
+.btn {
+    border-radius: 4px;
+}
+
+/* Ảnh trong bảng giỏ hàng */
+.row-image {
+    width: 100px;
+}
+
+/* Trường nhập dữ liệu */
+.form-field {
+    width: 250px;
+    display: inline-block;
+    padding: 5px;
+}
+
+/* Hàng trong giỏ hàng */
+.cart-row {
+    display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+/* Số lượng sản phẩm */
+.quantity {
+    display: inline-block;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+/* Nút tăng giảm số lượng */
+.chg-quantity {
+    width: 12px;
+    cursor: pointer;
+    display: block;
+    margin-top: 5px;
+    transition: .1s;
+}
+
+.chg-quantity:hover {
+    opacity: .6;
+}
+
+/* Ẩn phần tử */
+.hidden {
+    display: none !important;
+}

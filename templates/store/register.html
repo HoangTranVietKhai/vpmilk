@@ -1,0 +1,70 @@
+{% extends 'store/main.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4">Đăng ký tài khoản</h2>
+
+            <!-- Hiển thị thông báo lỗi -->
+            {% if messages %}
+            <div class="alert alert-danger">
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <form method="post" class="card p-4">
+                {% csrf_token %}
+
+                <!-- Hiển thị lỗi form tổng thể -->
+                {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {{ form.non_field_errors }}
+                </div>
+                {% endif %}
+
+                <!-- Hiển thị từng trường form -->
+                <div class="mb-3">
+                    <label for="{{ form.username.id_for_label }}" class="form-label">Tên đăng nhập</label>
+                    {{ form.username }}
+                    {% if form.username.errors %}
+                    <div class="text-danger">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="{{ form.email.id_for_label }}" class="form-label">Email</label>
+                    {{ form.email }}
+                    {% if form.email.errors %}
+                    <div class="text-danger">{{ form.email.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="{{ form.password1.id_for_label }}" class="form-label">Mật khẩu</label>
+                    {{ form.password1 }}
+                    {% if form.password1.errors %}
+                    <div class="text-danger">{{ form.password1.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="{{ form.password2.id_for_label }}" class="form-label">Xác nhận mật khẩu</label>
+                    {{ form.password2 }}
+                    {% if form.password2.errors %}
+                    <div class="text-danger">{{ form.password2.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Đăng ký</button>
+            </form>
+
+            <div class="text-center mt-3">
+                <p>Đã có tài khoản? <a href="{% url 'login' %}" class="text-decoration-none">Đăng nhập ngay</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

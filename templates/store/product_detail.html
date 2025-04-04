@@ -1,0 +1,11 @@
+{% extends 'store/main.html' %}
+{% block content %}
+    <div class="container">
+        <h2>{{ product.name }}</h2>
+        <img src="{{ product.imageURL }}" alt="{{ product.name }}" style="width: 300px;">
+        <p>Giá: {{ product.price_vnd|floatformat:0 }} VNĐ</p>
+
+        <p>{{ product.description }}</p>
+        <button data-product="{{ product.id }}" data-action="add" class="btn btn-primary update-cart">Add to Cart</button>
+    </div>
+{% endblock %}
